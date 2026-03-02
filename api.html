@@ -1,0 +1,26 @@
+<h3>Gửi dữ liệu lên server</h3>
+<button onclick="sendData()">Gửi Post</button>
+<div id="postResult"></div>
+
+<script>
+function sendData() {
+  const data = {
+    title: "Tiêu đề mới",
+    body: "Nội dung bài viết",
+    userId: 1
+  };
+
+  fetch("https://jsonplaceholder.typicode.com/posts", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+  .then(res => res.json())
+  .then(result => {
+    document.getElementById("postResult").innerHTML =
+      "Server trả về: " + JSON.stringify(result);
+  });
+}
+</script>

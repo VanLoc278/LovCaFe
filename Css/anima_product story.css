@@ -1,0 +1,40 @@
+body {
+    overflow-x: hidden;
+}
+/* Trạng thái ban đầu */
+.story,
+.img_story_product {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+}
+
+/* Khi xuất hiện */
+.story.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.img_story_product.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hiệu ứng riêng cho story */
+.story {
+    transform: translateX(-80px);
+}
+
+/* Hiệu ứng riêng cho hình */
+.img_story_product {
+    transform: translateX(80px);
+}
+
+/* Hover nhẹ cho ảnh */
+.img_story_product img {
+    transition: transform 0.6s ease;
+}
+
+.img_story_product img:hover {
+    transform: scale(1.05);
+}

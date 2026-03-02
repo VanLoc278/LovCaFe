@@ -1,0 +1,79 @@
+/* ================== CHẾ ĐỘ SÁNG (MẶC ĐỊNH) ================== */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --header-bg: #f8f8f8;
+    --footer-bg: #f1f1f1;
+    --card-bg: #ffffff;
+    --btn-bg: #ff7f50;
+    --btn-text: #ffffff;
+    --link-color: #333333;
+    --img-filter: brightness(100%);
+}
+
+/* ================== CHẾ ĐỘ TỐI ================== */
+body.dark-mode {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;
+    --header-bg: #2c2c2c;
+    --footer-bg: #2c2c2c;
+    --card-bg: #2a2a2a;
+    --btn-bg: #ff6347;
+    --btn-text: #ffffff;
+    --link-color: #f1f1f1;
+    --img-filter: brightness(85%);
+}
+/* Đảm bảo tất cả văn bản đổi màu khi dark mode */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode span,
+body.dark-mode a,
+body.dark-mode li,
+body.dark-mode label,
+body.dark-mode button {
+    color: var(--text-color) !important;
+}
+/* ================== ÁP DỤNG BIẾN CHO TOÀN TRANG ================== */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+a, a:visited {
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+#header, #footer {
+    background-color: var(--header-bg);
+    transition: background-color 0.3s ease;
+}
+
+.v8_menu, .column.product, .technology .v9_tab {
+    background-color: var(--card-bg);
+    transition: background-color 0.3s ease;
+}
+
+button, .add-cart-btn, .btn_row, .btn_menu_product {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.v8_img, .v9_img {
+    filter: var(--img-filter);
+    transition: filter 0.3s ease;
+}
+
+/* Optional: Hover effects */
+button:hover {
+    opacity: 0.85;
+}

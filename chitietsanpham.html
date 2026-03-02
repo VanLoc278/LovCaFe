@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết sản phẩm | LoVCaFe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="IMG/cafe.png">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Css/footer.css">
+    <link rel="stylesheet" href="Css/cafe_css.css">
+    <link rel="stylesheet" href="Css/product details.css">
+     <link rel="stylesheet" href="Css/cart.css">
+
+</head>
+
+<body>
+<div id="header"></div>
+  <!-- Main -->
+  <div class="container ">
+    
+    <!-- Hình ảnh -->
+    <div class="product-img">
+      <img id="productImg"  src="IMG_SP/CF_da.jpg" alt="Cà phê đá">
+    </div>
+
+    <!-- Thông tin -->
+    <div class="product-info product">
+      
+
+      <h3 id="productName" class="product-name">Cà Phê Đá</h3>
+      <div id="productPrice"  class="price">30.000đ</div>
+      <p id="productDesc" class="desc">
+        Cà phê đá truyền thống Việt Nam, hương vị đậm đà, pha chế từ hạt cà phê nguyên chất.
+      </p>
+
+      <!-- Chọn size -->
+      <div class="size-group">
+        <label>Chọn size:</label><br>
+
+        <div class="size-option">
+          <input type="radio" name="size" id="size_s" value="S" checked>
+          <label for="size_s">Size S</label>
+        </div>
+
+        <div class="size-option">
+          <input type="radio" name="size" id="size_m" value="M">
+          <label for="size_m">Size M</label>
+        </div>
+
+        <div class="size-option">
+          <input type="radio" name="size" id="size_l" value="L">
+          <label for="size_l">Size L (+5.000đ)</label>
+        </div>
+      </div>
+
+      <!-- Chọn số lượng -->
+      <div class="quantity-box">
+         <button class="qty-btn minus">-</button>
+        <input type="number" class="qty-input" value="1" min="1" max="20">
+        <button class="qty-btn plus">+</button>
+      </div>
+
+      <!-- Nút -->
+      <div class="action-buttons">
+        <button class="btn add-cart-btn">Thêm vào giỏ</button>
+        <button class="btn buy-now" onclick="location.href='checkout.html'">Mua ngay</button>
+      </div>
+     
+      <div class =" link"> 
+  
+      <a href="#"><img src="IMG/share.png" alt=""></a>
+      <a href=""><img src="IMG/face.png" alt=""></a>
+      <a href=""><img src="IMG/messenger.png" alt=""></a>
+      <a href=""><img src="IMG/zalo.png" alt=""></a>
+      <a href=""><img src="IMG/tik-tok.png" alt=""></a>
+      <a href=""><img src="IMG/twitter.png" alt=""></a>
+      <img src="IMG/copy.png" class="copy-btn" onclick="copyLink()" alt="Copy">
+      </div>
+<!-- Thông báo -->
+<div id="alert" class="alert">Đã sao chép link!</div>    
+    </div>
+  </div>
+
+  <!-- Sản phẩm liên quan -->
+
+   
+    <div id="v7">
+      <h2 class="v9_textCn">Sản phẩm liên quan</h2>
+             <div class="review">
+
+            <i class="fas btn fa-chevron-left btnLeft"></i>
+            <i class="fas btn fa-chevron-right btnRight"></i>
+
+            <div class="review-box">
+            
+
+                <div class="box card product" 
+                data-name="Cà Phê Đá"
+                data-price="30000"
+                data-img="IMG_SP/CF_da.jpg"
+                data-desc="Cà phê đá truyền thống Việt Nam, đậm đà hương vị.">              
+                    <a onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/CF_da.jpg"></a>
+                  <a onclick="goDetail(this.closest('.product'))"><h3>CaFe Đá</h3></a>
+                    <div class="tab_khung">
+                        <a href=""><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
+                        <a href=""><p class="v8_right khung">Giá <span class="gia-goc">35.000đ</span></p></a>
+                        <p  class="gia">Giá Sốc: <span class="gia-moi">30.000 Đồng</span></p>               
+                    </div>
+                    <div class="quantity-box-cart_detail">  
+                        <div class="quantity-box_detail">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" class="qty-input_box" value="1" min="1" max="20">
+                            <button class="qty-btn plus">+</button>
+                            <button  class="add-cart-btn_box">Thêm vào giỏ</button> 
+                        </div>
+                    </div>
+                    <button onclick="goDetail(this.closest('.product'))" class="btn_box">Mua</button>
+                </div>
+
+                <div class="box card product" 
+                data-name="Cà Phê Sữa"
+                data-price="30000"
+                data-img="IMG_SP/cafesua.jpg"
+                data-desc="Cà phê sữa truyền thống Việt Nam, đậm đà hương vị sữa và cà phê.">  
+                  <a onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/cafesua.jpg">
+                  <a onclick="goDetail(this.closest('.product'))"></a><h3>CaFe Sữa</h3>
+                    <div class="tab_khung">
+                        <a href=""><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
+                        <a href=""><p class="v8_right khung">Giá <span class="gia-goc">35.000đ</span></p></a>
+                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000 Đồng</span></p>               
+                    </div>
+                    <div class="quantity-box-cart_detail">  
+                        <div class="quantity-box_detail">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" class="qty-input_box" value="1" min="1" max="20">
+                            <button class="qty-btn plus">+</button>
+                            <button class="add-cart-btn_box">Thêm vào giỏ</button> 
+                        </div>
+                    </div>
+                    <button onclick="goDetail(this.closest('.product'))" class="btn_box">Mua</button>
+                </div>
+                <div class="box card product"
+                data-name="Cà Phê Đà Đạt"
+                data-price="35000"
+                data-img="IMG_SP/Dalat.jpg"
+                data-desc="Cà phê hương vị giá lạnh từ vùng đất Đà Lạt.">
+                    <a onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/Dalat.jpg"></a>
+                    <a  onclick="goDetail(this.closest('.product'))"><h3>CaFe Đà Lạt</h3> 
+                    <div class="tab_khung">
+                        <a href=""><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
+                        <a href=""><p class="v8_right khung">Giá <span class="gia-goc">40.000đ</span></p></a>
+                        <p class="gia">Giá Sốc: <span class="gia-moi">35.000 Đồng</span></p></a>               
+                    </div>
+                    <div class="quantity-box-cart_detail">  
+                        <div class="quantity-box_detail">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" class="qty-input_box" value="1" min="1" max="20">
+                            <button class="qty-btn plus">+</button>
+                            <button class="add-cart-btn_box">Thêm vào giỏ</button> 
+                        </div>
+                    </div>
+                    <button onclick="goDetail(this.closest('.product'))"  class="btn_box">Mua</button>
+                </div>
+                <div class="box card product"
+                data-name="Trân Châu Đường Đen"
+                data-price="30000"
+                data-img="IMG_SP/ttduongden.jpg"
+                data-desc="Hương vị trà sữa cùng đường đen khó quên">
+                    <a onclick="goDetail(this.closest('.product'))" ><img class="box_img" src="IMG_SP/ttduongden.jpg"></a>
+                    <a onclick="goDetail(this.closest('.product'))" ><h3>Trân Châu Đường Đen</h3></a>
+                    <div class="tab_khung">
+                        <a href=""><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
+                        <a href=""><p class="v8_right khung">Giá <span class="gia-goc">35.000đ</span></p></a>
+                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000 Đồng</span></p></a>               
+                    </div>
+                    <div class="quantity-box-cart_detail">  
+                        <div class="quantity-box_detail">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" class="qty-input_box" value="1" min="1" max="20">
+                            <button class="qty-btn plus">+</button>
+                            <button class="add-cart-btn_box">Thêm vào giỏ</button> 
+                        </div>
+                    </div>
+                    <button onclick="goDetail(this.closest('.product'))" class="btn_box">Mua</button>
+                </div>
+                 <div class="box card product"
+                data-name="Trà Sữa Truyền Thống"
+                data-price="30000"
+                data-img="IMG_SP/tttthong.jpg"
+                data-desc="Trà Sữa truyền thống Việt Nam, đậm đà hương vị.">
+                    <a onclick="goDetail(this.closest('.product'))" ><img class="box_img" src="IMG_SP/tttthong.jpg"></a>
+                    <a onclick="goDetail(this.closest('.product'))" ><h3>Trà Sữa Truyền Thống</h3></a>
+                    <div class="tab_khung">
+                        <a href=""onclick="goDetail(this.closest('.product'))" ><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
+                        <a href=""><p class="v8_right khung">Giá <span class="gia-goc">35.000đ</span></p></a>
+                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000 Đồng</span></p></a>               
+                    </div>
+                    <div class="quantity-box-cart_detail">  
+                        <div class="quantity-box_detail">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" class="qty-input_box" value="1" min="1" max="20">
+                            <button class="qty-btn plus">+</button>
+                            <button class="add-cart-btn_box">Thêm vào giỏ</button> 
+                        </div>
+                    </div>
+                    <button onclick="goDetail(this.closest('.product'))" class="btn_box">Mua</button>
+                </div>
+                <div class="box card product"
+                data-name="Trà Sữa Thái Xanh"
+                data-price="30000"
+                data-img="IMG_SP/thaixanh.jpg"
+                data-desc="Trà sữa thái xanh Việt Nam, đậm đà hương vị,hương vị thái dứa.">
+                    <a onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/thaixanh.jpg"></a>
+                    <a  onclick="goDetail(this.closest('.product'))" ><h3>Thái Xanh</h3></a>
+                    <div class="tab_khung">
+                        <a ><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
+                        <a><p class="v8_right khung">Giá <span class="gia-goc">35.000đ</span></p></a>
+                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000 Đồng</span></p></a>               
+                    </div>
+                    <div class="quantity-box-cart_detail">  
+                        <div class="quantity-box_detail">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" class="qty-input_box" value="1" min="1" max="20">
+                            <button class="qty-btn plus">+</button>
+                            <button class="add-cart-btn_box">Thêm vào giỏ</button> 
+                        </div>
+                    </div>
+                    <button onclick="goDetail(this.closest('.product'))"  class="btn_box">Mua</button>
+                </div>
+
+                <div class="box card product"              
+                data-name="Trà Sữa Thái Đỏ"
+                data-price="30000"
+                data-img="IMG_SP/thaido.jpg"
+                data-desc="Trà sữa thái đỏ Việt Nam, đậm đà hương vị,hương vị tuyệt vời">
+                    <a onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/thaido.jpg"></a>
+                    <a onclick="goDetail(this.closest('.product'))"><h3>Trà Sữa Thái Đỏ</h3></a>
+                    <div class="tab_khung">
+                        <a href=""><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
+                        <a href=""><p class="v8_right khung">Giá <span class="gia-goc">35.000đ</span></p></a>
+                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000 Đồng</span></p></a>               
+                    </div>
+                    <div class="quantity-box-cart_detail">  
+                        <div class="quantity-box_detail">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" class="qty-input_box" value="1" min="1" max="20">
+                            <button class="qty-btn plus">+</button>
+                            <button class="add-cart-btn_box">Thêm vào giỏ</button> 
+                        </div>
+                    </div>
+                    <button onclick="goDetail(this.closest('.product'))" class="btn_box">Mua</button>
+                </div>
+                <div class="box card product"                              
+                data-name="MatCha Latte"
+                data-price="30000"
+                data-img="IMG_SP/MATCHA_LATTE.jpg"
+                data-desc="MATCHA LATTE Việt Nam, đậm đà hương vị, bùng nổ cảm xúc.">
+                    <a onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/MATCHA_LATTE.jpg"></a>
+                    <a onclick="goDetail(this.closest('.product'))"><h3>MATCHA LATTE</h3></a>
+                    <div class="tab_khung">
+                        <a href=""><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
+                        <a href=""><p class="v8_right khung">Giá <span class="gia-goc">35.000đ</span></p></a>
+                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000 Đồng</span></p></a>               
+                    </div>
+                    <div class="quantity-box-cart_detail">  
+                        <div class="quantity-box_detail">
+                            <button class="qty-btn minus">-</button>
+                            <input type="number" class="qty-input_box" value="1" min="1" max="20">
+                            <button class="qty-btn plus">+</button>
+                            <button class="add-cart-btn_box">Thêm vào giỏ</button> 
+                        </div>
+                    </div>
+                    <button  onclick="goDetail(this.closest('.product'))" class="btn_box">Mua</button>
+                </div>
+            </div>
+        <script>
+            const listBox = document.querySelectorAll('.box');
+            const wrapperBox = document.querySelector('.review-box');
+            const btnLeft = document.querySelector('.btnLeft');
+            const btnRight = document.querySelector('.btnRight');
+            const reviewDiv = document.querySelector('.review');
+            document.addEventListener('DOMContentLoaded', function () {
+                // responsive
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth >= 1366) {
+                        make_slide(5);
+                    } else if (window.innerWidth >= 992) {
+                        make_slide(2);
+                    } else {
+                        make_slide(1);
+                    }
+                });
+
+                const media = [
+                    window.matchMedia('(min-width: 1366px)'),
+                    window.matchMedia('(min-width: 992px)'),
+                ];
+
+                if (media[0].matches) {
+                    make_slide(5);
+                } else if (media[1].matches) {
+                    make_slide(2);
+                } else {
+                    make_slide(1);
+                }
+            });
+
+            function make_slide(amountSlideAppear) {
+                // set width and margin for item slide
+                const widthItemAndMargin = reviewDiv.offsetWidth / amountSlideAppear;
+                let widthAllBox = widthItemAndMargin * listBox.length;
+                wrapperBox.style.width = `${widthAllBox}px`;
+
+                listBox.forEach((element) => {
+                    element.style.marginRight = '12px';
+                    element.style.width = `${widthItemAndMargin - 12}px`;
+                });
+
+                // handle slide
+                let count = 0;
+                let spacing = widthAllBox - amountSlideAppear * widthItemAndMargin;
+                btnRight.addEventListener('click', function () {
+                    count += widthItemAndMargin;
+
+                    if (count > spacing) {
+                        count = 0;
+                    }
+                    wrapperBox.style.transform = `translateX(${-count}px)`;
+                });
+
+                btnLeft.addEventListener('click', function () {
+                    count -= widthItemAndMargin;
+
+                    if (count < 0) {
+                        count = spacing;
+                    }
+                    wrapperBox.style.transform = `translateX(${-count}px)`;
+                });
+            }
+        </script>
+
+    </div>
+
+
+<div id = "footer"></div>
+
+  <script>
+    function changeQty(amount) {
+      let qty = document.getElementById("qty");
+      let value = parseInt(qty.value);
+
+      value += amount;
+
+      if (value < 1) value = 1;
+      if (value > 20) value = 20;
+
+      qty.value = value;
+    }
+
+    function addToCart() {
+      let size = document.querySelector('input[name="size"]:checked').value;
+      let qty = document.getElementById("qty").value;
+
+      alert(`Đã thêm ${qty} sản phẩm (Size ${size}) vào giỏ hàng!`);
+    }
+
+    function buyNow() {
+      alert("Chuyển đến trang thanh toán...");
+      window.location.href = "infodonhang.html";
+    }
+  </script>
+
+<script>
+  function copyLink() {
+    const linkToCopy = "https://example.com"; // <<< thay link tại đây
+
+    navigator.clipboard.writeText(linkToCopy).then(() => {
+      let alertBox = document.getElementById("alert");
+      alertBox.style.display = "block";
+      setTimeout(() => alertBox.style.display = "none", 2000);
+    });
+  }
+</script>
+
+
+<script src="JS/header_footer.js"></script>
+<script src="JS/cart.js"></script>
+<script src="JS/CF.js"></script>
+<script src="JS/chitietsp.js"></script>
+</body>
+
+</html>

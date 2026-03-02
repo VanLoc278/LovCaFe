@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chi tiết đơn hàng #DH12345</title>
+  <style>
+    :root{
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#6b5ce7;
+      --success:#10b981;
+      --danger:#ef4444;
+      --glass: rgba(255,255,255,0.6);
+      --radius:12px;
+      font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background: linear-gradient(180deg, #f3f4f8 0%, var(--bg) 100%);
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns: 1fr 380px;
+      gap:24px;
+      align-items:start;
+    }
+
+    /* Header */
+    header.order-header{
+      grid-column:1/-1;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:8px;
+    }
+    .order-meta{
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+    .order-title{
+      font-size:1.25rem;
+      font-weight:600;
+    }
+    .order-sub{
+      font-size:0.95rem;
+      color:var(--muted);
+    }
+
+    /* Card */
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 6px 20px rgba(16,24,40,0.06);
+      border:1px solid rgba(16,24,40,0.04);
+    }
+
+    /* Left column (details) */
+    .order-info .section{
+      margin-bottom:18px;
+    }
+    .section h3{
+      margin:0 0 12px 0;
+      font-size:1rem;
+      color:#111827;
+    }
+
+    .info-grid{
+      display:grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap:12px;
+    }
+    .info-item{
+      background:linear-gradient(180deg, rgba(0,0,0,0.02), transparent);
+      padding:12px;
+      border-radius:10px;
+      font-size:0.95rem;
+    }
+    .info-item p{margin:4px 0; color:var(--muted); font-size:0.9rem}
+    .info-item strong{display:block; font-weight:600; color:#111827}
+
+    /* Items table */
+    .items-table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:6px;
+    }
+    .items-table thead th{
+      text-align:left;
+      font-size:0.85rem;
+      color:var(--muted);
+      padding:10px 8px;
+      border-bottom:1px dashed rgba(16,24,40,0.06);
+    }
+    .items-table tbody td{
+      padding:12px 8px;
+      vertical-align:middle;
+      border-bottom:1px dashed rgba(16,24,40,0.03);
+      font-size:0.95rem;
+    }
+    .product-row{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .product-row img{
+      width:64px;
+      height:64px;
+      object-fit:cover;
+      border-radius:8px;
+      flex-shrink:0;
+      border:1px solid rgba(0,0,0,0.04);
+    }
+    .qty-badge{
+      display:inline-block;
+      padding:4px 8px;
+      background:rgba(16,24,40,0.04);
+      border-radius:999px;
+      font-size:0.85rem;
+      color:var(--muted);
+    }
+
+    /* Right column (summary) */
+    .summary{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      position:relative;
+    }
+    .summary .summary-row{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:0.95rem;
+    }
+    .summary .total{
+      font-weight:700;
+      font-size:1.15rem;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:600;
+      font-size:0.9rem;
+    }
+    .badge.paid{ background:rgba(16,185,129,0.12); color:var(--success); border:1px solid rgba(16,185,129,0.18)}
+    .badge.pending{ background:rgba(245,158,11,0.08); color:#b45309; border:1px solid rgba(245,158,11,0.12)}
+    .badge.cancel{ background:rgba(239,68,68,0.08); color:var(--danger); border:1px solid rgba(239,68,68,0.10)}
+
+    /* buttons */
+    .actions{
+      display:flex;
+      gap:10px;
+      margin-top:6px;
+    }
+    .btn{
+      padding:10px 14px;
+      border-radius:10px;
+      border:0;
+      font-weight:600;
+      cursor:pointer;
+      font-size:0.95rem;
+    }
+    .btn.primary{
+      background:linear-gradient(90deg,var(--accent), #5a4cf5);
+      color:#fff;
+      box-shadow: 0 6px 18px rgba(107,92,231,0.18);
+    }
+    .btn.ghost{
+      background:transparent;
+      border:1px solid rgba(16,24,40,0.06);
+      color:var(--muted);
+    }
+    .btn.danger{
+      background:var(--danger);
+      color:#fff;
+    }
+
+    /* small details */
+    .note{ font-size:0.9rem; color:var(--muted) }
+    .muted{ color:var(--muted) }
+
+    /* responsive */
+    @media (max-width:980px){
+      .container{ grid-template-columns: 1fr; padding:0 8px; }
+      header.order-header{flex-direction:column; align-items:flex-start; gap:8px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header class="order-header">
+      <div class="order-meta">
+        <div>
+          <div class="order-title">Chi tiết đơn hàng <span style="color:var(--muted); font-weight:500">#DH12345</span></div>
+          <div class="order-sub">Ngày đặt: <strong>18 Tháng 11, 2025</strong> · Phương thức thanh toán: <strong>Thanh toán khi nhận hàng (COD)</strong></div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <span class="badge paid" id="order-status-badge">Đã thanh toán</span>
+        <div style="display:flex;gap:8px">
+          <button class="btn ghost" onclick="goBack()">Trở về</button>
+          <button class="btn primary" onclick="printOrder()">In đơn</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- LEFT: thông tin & sản phẩm -->
+    <main class="card order-info">
+      <!-- Thông tin giao hàng & người nhận -->
+      <div class="section">
+        <h3>Thông tin giao hàng</h3>
+        <div class="info-grid">
+          <div class="info-item">
+            <strong>Người nhận</strong>
+            <p>Ngô Văn Lộc</p>
+            <p class="muted">SĐT: 0123 456 789</p>
+          </div>
+          <div class="info-item">
+            <strong>Địa chỉ</strong>
+            <p>123 Đường Lê Lợi, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh</p>
+            <p class="muted">Ghi chú: Gọi trước 15 phút</p>
+          </div>
+
+          <div class="info-item">
+            <strong>Trạng thái đơn</strong>
+            <p class="muted">Đang chuẩn bị</p>
+          </div>
+          <div class="info-item">
+            <strong>Phương thức vận chuyển</strong>
+            <p class="muted">Giao hàng nhanh (2-3 ngày)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Danh sách sản phẩm -->
+      <div class="section">
+        <h3>Chi tiết sản phẩm</h3>
+        <table class="items-table" aria-label="Danh sách sản phẩm">
+          <thead>
+            <tr>
+              <th>Sản phẩm</th>
+              <th>Số lượng</th>
+              <th>Đơn giá</th>
+              <th>Tổng</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="product-row">
+                  <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=200&q=60" alt="Cà phê đá">
+                  <div>
+                    <div style="font-weight:600">Cà phê đá</div>
+                    <div class="muted" style="font-size:0.88rem">Size: L · Không đường</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="qty-badge">2</span></td>
+              <td>30.000₫</td>
+              <td>60.000₫</td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="product-row">
+                  <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=200&q=60" alt="Bánh mì">
+                  <div>
+                    <div style="font-weight:600">Bánh ngọt</div>
+                    <div class="muted" style="font-size:0.88rem">Vị: Socola</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="qty-badge">1</span></td>
+              <td>25.000₫</td>
+              <td>25.000₫</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="margin-top:10px" class="note">Mã giảm giá: <strong>NONE</strong></div>
+      </div>
+
+      <!-- Ghi chú & lịch sử -->
+      <div class="section">
+        <h3>Ghi chú của khách hàng</h3>
+        <div class="info-item">
+          <p class="muted">Xin giảm đá, giao trước 9:00 nếu có thể. Cảm ơn!</p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- RIGHT: tóm tắt thanh toán -->
+    <aside class="summary card">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <div style="font-weight:700">Tóm tắt thanh toán</div>
+          <div class="muted">#DH12345</div>
+        </div>
+
+        <div class="summary-row"><span>Tiền hàng</span><span>85.000₫</span></div>
+        <div class="summary-row"><span>Phí vận chuyển</span><span>15.000₫</span></div>
+        <div class="summary-row"><span>Giảm giá</span><span>-0₫</span></div>
+        <hr style="border:none;border-top:1px dashed rgba(0,0,0,0.06);margin:12px 0">
+        <div class="summary-row total"><span>Tổng phải trả</span><span>100.000₫</span></div>
+        <div style="margin-top:8px" class="note">Thanh toán: <strong>COD</strong></div>
+      </div>
+
+      <div style="margin-top:6px">
+        <div class="actions">
+          <button class="btn primary" onclick="downloadInvoice()">Tải hóa đơn (PDF)</button>
+          <button class="btn ghost" onclick="contactSupport()">Liên hệ</button>
+        </div>
+        <div style="margin-top:10px">
+          <button class="btn" style="background:transparent;color:var(--muted);padding:8px;border-radius:8px;border:1px dashed rgba(0,0,0,0.04)" onclick="cancelOrder()">Hủy đơn hàng</button>
+        </div>
+      </div>
+
+      <div style="margin-top:auto;font-size:0.9rem;color:var(--muted)">
+        <div><strong>Ghi chú:</strong></div>
+        <div>- Vui lòng chuẩn bị tiền lẻ cho shipper.</div>
+        <div>- Hủy đơn trong vòng 10 phút nếu cần thay đổi.</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <script>
+    // Các hàm JS nhỏ hỗ trợ tương tác (demo)
+    function goBack(){
+      if(history.length>1) history.back();
+      else window.location.href = 'product.html';
+    }
+
+    function printOrder(){
+      window.print();
+    }
+
+    function contactSupport(){
+      alert('Liên hệ CSKH: 1900 1234 hoặc email: cskh@lovcafe.vn');
+    }
+
+    function cancelOrder(){
+      if(confirm('Bạn có chắc muốn hủy đơn hàng này?')){
+        // Thực tế: gọi API để hủy đơn. Ở đây chỉ demo.
+        document.getElementById('order-status-badge').className = 'badge cancel';
+        document.getElementById('order-status-badge').innerText = 'Đã hủy';
+        alert('Đã gửi yêu cầu hủy đơn. Nhân viên sẽ liên hệ bạn sớm.');
+      }
+    }
+
+    function downloadInvoice(){
+      // Demo tạo file txt để tải. Thực tế bạn nên tạo PDF ở server hoặc dùng thư viện jsPDF.
+      const content = [
+        'Hoá đơn đơn hàng #DH12345',
+        'Ngày: 18-11-2025',
+        'Khách hàng: Ngô Văn Lộc',
+        '---',
+        '1 x Cà phê đá - 30.000₫ x2 = 60.000₫',
+        '1 x Bánh ngọt - 25.000₫ = 25.000₫',
+        '---',
+        'Tổng: 100.000₫'
+      ].join('\\n');
+
+      const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'invoice_DH12345.txt';
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:#f6f1eb;
+}
+ 
+
+header{
+  background:linear-gradient(rgba(75,56,50,0.6),rgba(75,56,50,0.6)),
+  url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085');
+  background-size:cover;
+  background-position:center;
+  color:white;
+  text-align:center;
+  padding:120px 20px;
+}
+
+header h1{
+  font-size:48px;
+  margin:0;
+}
+
+header p{
+  margin-top:15px;
+  font-size:18px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.story-section{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 1s ease;
+}
+
+.story-section.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.story-section:nth-child(even){
+  flex-direction:row-reverse;
+}
+
+.story-img{
+  flex:1;
+}
+
+.story-img img{
+width: 100%;
+border-radius: 14px;
+box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+max-width: 570px;
+height: 410px;
+}
+.story-content{
+  flex:1;
+}
+
+.story-content h2{
+  font-size:40px;
+  color:#2d2d2d;
+  margin-bottom:20px;
+}
+
+.story-content p{
+  font-size:20px;
+  line-height: 1.5;
+}
+
+/* Hover nhẹ cho ảnh */
+.story-img img {
+    transition: transform 0.6s ease;
+}
+
+.story-img img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media(max-width:768px){
+  header{
+    padding:80px 20px;
+  }
+
+  header h1{
+    font-size:30px;
+  }
+
+  .story-section{
+    flex-direction:column !important;
+    text-align:center;
+  }
+
+  .story-content h2{
+    font-size:24px;
+  }
+}
+
+.testimonial-section{
+  padding:50px 20px;
+  background:#f3ebe3;
+  text-align:center;
+  overflow:hidden
+}
+
+.testimonial-section h2{
+  font-size:40px;
+  margin-bottom:150px;
+  color:#4b3832;
+}
+
+.testimonial-wrapper{
+  position:relative;
+  max-width:1340px;
+  margin:auto;
+
+}
+
+.testimonial-slider{
+  display:flex;
+  gap:30px;
+  transition:transform 0.5s ease;
+}
+
+.testimonial-card{
+  min-width:320px;
+  flex:0 0 320px;
+  background:#e4d2d2;
+  padding:90px 30px 40px;
+  border-radius:25px;
+  position:relative;
+  box-shadow:0 15px 35px rgba(0,0,0,0.08);
+  text-align:center;
+}
+
+.testimonial-card img{
+  width:130px;
+  height:130px;
+  border-radius:50%;
+  object-fit:cover;
+  position:absolute;
+  top:-65px;
+  left:50%;
+  transform:translateX(-50%);
+  background:white;
+  z-index:2;
+}
+
+.testimonial-card h3{
+  margin-top:20px;
+  font-size:24px;
+}
+
+.stars{
+  color:#f4b400;
+  margin:10px 0;
+  font-size:25px;
+}
+
+.nav-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius:50%;
+  border:none;
+  background:#ffffff;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  cursor:pointer;
+  font-size: 20px;
+  z-index:10; /* QUAN TRỌNG */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:0.3s ease;
+}
+
+.nav-btn:hover{
+  transform:translateY(-50%) scale(1.1);
+  box-shadow:0 12px 25px rgba(0,0,0,0.25);
+}
+
+.left{
+  left: -50px;
+}
+
+.right{
+  right:-50px;
+}
+@media(max-width:768px){
+  .testimonial-card{
+    min-width:260px;
+    flex:0 0 260px;
+  }
+}
+.d1{
+    background-color: rgb(255, 235, 236);
+}
+.d2{
+    background-color: rgb(231, 246, 174);
+}
+
+
+
+.d4{
+    background-color: bisque;
+}

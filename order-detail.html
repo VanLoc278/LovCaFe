@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="Css/order-detail.css">
+<link rel="icon" type="image/x-icon" href="IMG/cafe.png">
+
+<title> Chi tiết đơn hàng</title>
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h2>Chi tiết đơn hàng</h2>
+
+
+    <span class="badge">Đặt hàng thành công</span>
+    
+  </div>
+
+  <!-- LEFT -->
+  <div class="card">
+    <h3>Thông tin giao hàng</h3>
+    <div class="info-grid">
+      <div class="info-item">
+        <strong>Người nhận</strong>
+        <span id="name"></span><br>
+        <span id="phone"></span>
+      </div>
+      <div class="info-item">
+        <strong>Địa chỉ</strong>
+        <span id="address"></span>
+      </div>
+        <div class="info-item">
+        <strong>Ghi chú</strong>
+        <span id="note"></span>
+      </div>
+        <div class="info-item">
+        <strong>Order Date</strong>
+        <span id="orderDate"></span>
+        <strong>Order Time</strong>
+        <span id="orderTime"></span>
+      </div>
+    </div>
+
+    <h3 style="margin-top:20px">Sản phẩm</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Sản phẩm</th>
+          <th>SL</th>
+          <th>Giá</th>
+          <th>Tổng</th>
+        </tr>
+      </thead>
+      <tbody id="orderItems"></tbody>
+    </table>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="card">
+    <h3>Tóm tắt thanh toán</h3>
+
+    <div class="summary-row">
+      <span>Tạm tính</span>
+      <span id="subTotal">0đ</span>
+    </div>
+
+  <!--<div class="summary-row">
+      <span>Phí giao hàng</span>
+      <span>15.000đ</span>
+    </div>
+  -->
+    <hr>
+
+    <div class="summary-row total">
+      <span>Tổng cộng</span>
+      <span id="total">0đ</span>
+    </div>
+
+    <button class="btn primary" onclick="window.print()">In đơn hàng</button>
+    <br><br>
+    <button class="btn ghost" onclick="location.href='index.html'">Về trang chủ</button>
+  </div>
+
+</div>
+
+<script src="JS/order-detail.js"></script>
+</body>
+</html>

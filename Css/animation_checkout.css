@@ -1,0 +1,76 @@
+/* ===== OVERLAY ===== */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===== LOADING ===== */
+.loader {
+  width: 70px;
+  height: 70px;
+  border: 6px solid rgba(255,255,255,0.3);
+  border-top-color: #ffd86b;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+.overlay p {
+  color: #fff;
+  font-size: 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== SUCCESS ===== */
+.success-box {
+  background: rgba(255,255,255,0.15);
+  padding: 40px 50px;
+  border-radius: 24px;
+  text-align: center;
+  color: #fff;
+  animation: popUp 0.5s ease forwards;
+}
+
+.checkmark {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  animation: scaleIn 0.4s ease;
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}

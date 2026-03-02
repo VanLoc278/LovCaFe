@@ -1,0 +1,116 @@
+/* Đặt nền Parallax cho toàn bộ trang */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/IMG/o.gif');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    height: 100%;
+    color: rgb(203, 79, 79);
+}
+
+/* Phần v1: Nền Parallax cho toàn bộ phần đầu trang */
+#v1 {
+    background-image: url('D:/CAFECHILL/IMG/poster.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(187, 84, 84);
+    text-align: center;
+}
+
+#v1 h1 {
+    font-size: 3rem;
+    animation: fadeIn 2s ease-out;
+}
+
+/* Animation cho fadeIn */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Phần v2: Navbar Sticky */
+#v2 {
+    background-color: #333;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.navbar a {
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Khi Navbar có class sticky */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #111;
+    padding: 10px 0;
+    z-index: 999;
+}
+
+/* Submenu */
+.subnav-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.subnav:hover .subnav-content {
+    display: block;
+}
+
+/* Hiệu ứng cuộn cho các phần tử */
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-out;
+}
+
+.scroll-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Các section nội dung */
+.content-section {
+    padding: 50px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.content-section p {
+    font-size: 1rem;
+    color: #555;
+}

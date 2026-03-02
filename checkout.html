@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/x-icon" href="IMG/cafe.png">
+  <title>Thanh toán | LoVCaFe</title>
+  <link rel="stylesheet" href="Css/checkout.css" >
+
+  <link rel="stylesheet" href="Css/animation_checkout.css" >
+
+
+  
+ 
+</head>
+<body>
+
+<!-- LOADING OVERLAY -->
+<div id="loadingOverlay" class="overlay hidden">
+  <div class="loader"></div>
+  <p>Đang xử lý đơn hàng...</p>
+</div>
+
+<!-- SUCCESS OVERLAY -->
+<div id="successOverlay" class="overlay hidden">
+  <div class="success-box">
+    <div class="checkmark">✓</div>
+    <h2>Đặt hàng thành công!</h2>
+    <p>Cảm ơn bạn đã mua hàng tại LoVCaFe ☕</p>
+  </div>
+</div>
+
+<div class="checkout-page">
+
+  <h1 class="page-title">☕ Thanh toán</h1>
+
+  <div class="checkout-grid">
+
+    <!-- LEFT -->
+    <div class="card fade-up">
+      <h2>Thông tin khách hàng</h2>
+
+      <div class="input-group">
+        <label>Họ và tên</label>
+        <input type="text" id="name" placeholder="Nguyễn Văn A">
+      </div>
+
+      <div class="input-group">
+        <div class="phone-field">
+        <span class="country-code">+84</span>
+        <input type="tel" id="phone" placeholder="912 345 678">
+  </div>
+      </div>
+
+      <div class="input-group">
+        <label>Địa chỉ giao hàng</label>
+        <textarea id="address" placeholder="Số nhà, đường, quận..."></textarea>
+      </div>
+
+      <div class="input-group">
+        <label>Ghi chú</label>
+        <textarea id="note" placeholder="Ít đá, giao buổi sáng..."></textarea>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="card fade-up delay">
+      <h2>Đơn hàng của bạn</h2>
+
+      <ul id="checkoutItems" class="order-list"></ul>
+
+      <div class="total-box">
+        <span>Tổng tiền</span>
+        <strong id="checkoutTotal">0đ</strong>
+      </div>
+
+      <button id="placeOrder" class="btn-primary">
+        Đặt hàng ngay
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script src="JS/checkout.js"></script>
+<script src="JS/animation_checkout.js"></script>
+
+</body>
+</html>
