@@ -47,9 +47,10 @@
   transform: translateY(-3px);
 }
 
-  .QR {
-    width: 100%;
-    max-width: 50px; 
+  .QR {  
+  width: 100%;
+  max-width: 92px;
+  margin: 11px 0 0 0px; 
 }
  
 .footer-bottom {
