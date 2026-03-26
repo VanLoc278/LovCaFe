@@ -49,15 +49,14 @@
         }
 
         .story p {
-        font-size: 16px;
-        line-height: 40px;
-        color: #555;
+        font-size: 19px;
+        line-height: 2.0;
+        font-family: 'Beau Sweet Sans';
         }
 
         /* Phần ảnh bên phải */
         .img_story_product {
         flex: 1;
-       
         
         }
 
@@ -154,4 +153,56 @@
 
 .tab-btn:active {
     color: white;
+}
+
+@media (max-width:768px){
+
+/* container */
+.story_input_product{
+    flex-direction: column;
+}
+
+/* text */
+.story{
+    flex:unset;
+    width:100%;
+    padding:25px;
+}
+
+/* title */
+.title{
+    height:auto;
+    line-height:normal;
+    padding:20px 0;
+}
+
+.title h1{
+    font-size:28px;
+}
+
+/* heading */
+.story h2{
+    font-size:22px;
+    text-align:center;
+}
+
+/* paragraph */
+.story p{
+    font-size:15px;
+    line-height:30px;
+    text-align:justify;
+}
+
+/* image */
+.img_story_product{
+    width:100%;
+    height:260px;
+}
+
+.img_story_product img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
 }

@@ -1,65 +1,68 @@
+const listBox = document.querySelectorAll('.box');
+const wrapperBox = document.querySelector('.review-box');
+const btnLeft = document.querySelector('.btnLeft');
+const btnRight = document.querySelector('.btnRight');
+const reviewDiv = document.querySelector('.review');
 
-            const listBox = document.querySelectorAll('.box');
-            const wrapperBox = document.querySelector('.review-box');
-            const btnLeft = document.querySelector('.btnLeft');
-            const btnRight = document.querySelector('.btnRight');
-            const reviewDiv = document.querySelector('.review');
-            document.addEventListener('DOMContentLoaded', function () {
-                // responsive
-                window.addEventListener('resize', function () {
-                    if (window.innerWidth >= 1366) {
-                        make_slide(5);
-                    } else if (window.innerWidth >= 992) {
-                        make_slide(2);
-                    } else {
-                        make_slide(1);
-                    }
-                });
+let count = 0;
+let widthItem = 0;
+let spacing = 0;
 
-                const media = [
-                    window.matchMedia('(min-width: 1366px)'),
-                    window.matchMedia('(min-width: 992px)'),
-                ];
+function getSlideAmount() {
+    if (window.innerWidth >= 1366) {
+        return 5;
+    } 
+    else if (window.innerWidth >= 768) {
+        return 3;
+    } 
+    else {
+        return 2.3; // mobile: 2 sản phẩm + lộ 1 phần sản phẩm thứ 3
+    }
+}
 
-                if (media[0].matches) {
-                    make_slide(5);
-                } else if (media[1].matches) {
-                    make_slide(2);
-                } else {
-                    make_slide(1);
-                }
-            });
+function make_slide() {
 
-            function make_slide(amountSlideAppear) {
-                // set width and margin for item slide
-                const widthItemAndMargin = reviewDiv.offsetWidth / amountSlideAppear;
-                let widthAllBox = widthItemAndMargin * listBox.length;
-                wrapperBox.style.width = `${widthAllBox}px`;
+    const amountSlideAppear = getSlideAmount();
 
-                listBox.forEach((element) => {
-                    element.style.marginRight = '12px';
-                    element.style.width = `${widthItemAndMargin - 12}px`;
-                });
+    widthItem = reviewDiv.offsetWidth / amountSlideAppear;
 
-                // handle slide
-                let count = 0;
-                let spacing = widthAllBox - amountSlideAppear * widthItemAndMargin;
-                btnRight.addEventListener('click', function () {
-                    count += widthItemAndMargin;
+    const widthAllBox = widthItem * listBox.length;
 
-                    if (count > spacing) {
-                        count = 0;
-                    }
-                    wrapperBox.style.transform = `translateX(${-count}px)`;
-                });
+    wrapperBox.style.width = `${widthAllBox}px`;
 
-                btnLeft.addEventListener('click', function () {
-                    count -= widthItemAndMargin;
+    listBox.forEach((element) => {
+        element.style.width = `${widthItem - 12}px`;
+        element.style.marginRight = '12px';
+    });
 
-                    if (count < 0) {
-                        count = spacing;
-                    }
-                    wrapperBox.style.transform = `translateX(${-count}px)`;
-                });
-            }
-      
+    spacing = widthAllBox - reviewDiv.offsetWidth;
+
+    wrapperBox.style.transform = `translateX(0px)`;
+    count = 0;
+}
+
+btnRight.addEventListener('click', function () {
+
+    count += widthItem;
+
+    if (count > spacing) {
+        count = 0;
+    }
+
+    wrapperBox.style.transform = `translateX(${-count}px)`;
+});
+
+btnLeft.addEventListener('click', function () {
+
+    count -= widthItem;
+
+    if (count < 0) {
+        count = spacing;
+    }
+
+    wrapperBox.style.transform = `translateX(${-count}px)`;
+});
+
+window.addEventListener('resize', make_slide);
+
+document.addEventListener('DOMContentLoaded', make_slide);

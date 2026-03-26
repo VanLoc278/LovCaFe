@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="Css/cafe_css.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="Css/footer.css">
+    <link rel="stylesheet" href="Css/header_footer.css">
     <link rel="stylesheet" href="Css/cart.css">
-   <!-- <link rel="stylesheet" href="Css/light_night.css">-->
     <title>LoVCaFe</title>
 </head>
 <body>
@@ -23,34 +22,34 @@
 
             <div class="mySlides fade">
                 <div class="numbertext"></div>
-                <img src="img/slide1.jpg" >
+                <img src="IMG/slide1.jpg" >
                 <div class="text"></div>
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext"></div>
-                <img src="img/slide2.jpg" >
+                <img src="IMG/slide2.jpg" >
                 <div class="text"></div>
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext"></div>
-                <img src="img/slide3.jpg" >
+                <img src="IMG/slide3.jpg" >
                 <div class="text"></div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext"></div>
-                <img src="img/slide4.jpg" >
+                <img src="IMG/slide4.jpg" >
                 <div class="text"></div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext"></div>
-                <img src="img/slide5.jpg" >
+                <img src="IMG/slide5.jpg" >
                 <div class="text"></div>
             </div>
             <div class="mySlides fade">
                 <div class="numbertext"></div>
-                <img src="img/slide6.jpg" >
+                <img src="IMG/slide6.jpg" >
                 <div class="text"></div>
             </div>
 
@@ -82,16 +81,13 @@
             <H2>Câu chuyện về LoVCaFe</H2>
             <p>Tại LoVCafe, chúng tôi không chỉ phục vụ cà phê ngon mà còn mang đến một không gian ấm cúng, đầy cảm hứng để bạn thư giãn và tận hưởng những khoảnh khắc tuyệt vời.</br> 
                 Với sứ mệnh mang đến những tách cà phê chất lượng, mỗi hạt cà phê tại LoVCafe đều được lựa chọn kỹ lưỡng, rang xay tươi mới để mang đến hương vị đặc biệt mà bạn khó lòng quên được.
-            </br>Dù là bạn tìm kiếm một nơi để làm việc, gặp gỡ bạn bè, hay đơn giản là muốn thưởng thức một tách cà phê trong không gian thư giãn, LoVCafe luôn là sự lựa chọn lý tưởng. </br>Cùng với đội ngũ nhân viên nhiệt tình, không gian được thiết kế ấm áp và sáng tạo, 
-            chúng tôi hy vọng sẽ mang lại cho bạn một trải nghiệm thật sự khác biệt.
-            Hãy đến và trải nghiệm hương vị cà phê tuyệt vời tại LoVCafe – nơi tình yêu dành cho cà phê là nguồn cảm hứng bất tận!</p>
+            </br>Dù là bạn tìm kiếm một nơi để làm việc, gặp gỡ bạn bè, hay đơn giản là muốn thưởng thức một tách cà phê trong không gian thư giãn, LoVCafe luôn là sự lựa chọn lý tưởng. </br>
+            </p>
         </div>   
         <div class="img_story">
-            <img src="IMG/story.jpg" >
+            <img src="IMG/story1.jpg" >
         </div>
-        <div class="title_right">
-            <h1>Nguyên Liệu</h1>
-        </div>
+     
     </div> 
   
    <button class="btn" onclick="location.href='story.html';">Xem thêm</button>
@@ -118,12 +114,12 @@
                 data-price="30000"
                 data-img="IMG_SP/CF_da.jpg"
                 data-desc="Cà phê đá truyền thống Việt Nam, đậm đà hương vị.">              
-                    <a onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/CF_da.jpg"></a>
-                  <a onclick="goDetail(this.closest('.product'))"><h3>CaFe Đá</h3></a>
+                  <div onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/CF_da.jpg"></div>
+                  <div onclick="goDetail(this.closest('.product'))"><h3>CaFe Đá</h3></div>
                     <div class="tab_khung">
                         <a href=""><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
                         <a href=""><p class="v8_right khung">Giá <span class="gia-goc">35.000đ</span></p></a>
-                        <p  class="gia">Giá Sốc: <span class="gia-moi">30.000 Đồng</span></p>               
+                        <p  class="gia">Giá Sốc: <span class="gia-moi">30.000đ</span></p>               
                     </div>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -141,12 +137,12 @@
                 data-price="30000"
                 data-img="IMG_SP/cafesua.jpg"
                 data-desc="Cà phê sữa truyền thống Việt Nam, đậm đà hương vị sữa và cà phê.">  
-                  <a onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/cafesua.jpg">
-                  <a onclick="goDetail(this.closest('.product'))"></a><h3>CaFe Sữa</h3>
+                  <div onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/cafesua.jpg"></div>
+                  <div onclick="goDetail(this.closest('.product'))"><h3>CaFe Sữa</h3></div>
                     <div class="tab_khung">
                         <a href=""><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
                         <a href=""><p class="v8_right khung">Giá <span class="gia-goc">35.000đ</span></p></a>
-                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000 Đồng</span></p>               
+                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000đ</span></p>               
                     </div>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -163,12 +159,12 @@
                 data-price="35000"
                 data-img="IMG_SP/Dalat.jpg"
                 data-desc="Cà phê hương vị giá lạnh từ vùng đất Đà Lạt.">
-                    <a onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/Dalat.jpg"></a>
-                    <a  onclick="goDetail(this.closest('.product'))"><h3>CaFe Đà Lạt</h3> 
+                    <div onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/Dalat.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))"><h3>CaFe Đà Lạt</h3> </div>
                     <div class="tab_khung">
                         <a href=""><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
-                        <a href=""><p class="v8_right khung">Giá <span class="gia-goc">40.000đ</span></p></a>
-                        <p class="gia">Giá Sốc: <span class="gia-moi">35.000 Đồng</span></p></a>               
+                        <a href=""><p class="v8_right khung">Giá <span class="gia-goc">40.0đ</span></p></a>
+                        <p class="gia">Giá Sốc: <span class="gia-moi">35.000đ</span></p></a>               
                     </div>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -185,12 +181,12 @@
                 data-price="30000"
                 data-img="IMG_SP/ttduongden.jpg"
                 data-desc="Hương vị trà sữa cùng đường đen khó quên">
-                    <a onclick="goDetail(this.closest('.product'))" ><img class="box_img" src="IMG_SP/ttduongden.jpg"></a>
-                    <a onclick="goDetail(this.closest('.product'))" ><h3>Trân Châu Đường Đen</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))" ><img class="box_img" src="IMG_SP/ttduongden.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))" ><h3>Trân Châu Đường Đen</h3></div>
                     <div class="tab_khung">
                         <a href=""><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
-                        <a href=""><p class="v8_right khung">Giá <span class="gia-goc">35.000đ</span></p></a>
-                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000 Đồng</span></p></a>               
+                        <a href=""><p class="v8_right khung">Giá <span class="gia-goc">35.0đ</span></p></a>
+                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000đ</span></p></a>               
                     </div>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -207,12 +203,12 @@
                 data-price="30000"
                 data-img="IMG_SP/tttthong.jpg"
                 data-desc="Trà Sữa truyền thống Việt Nam, đậm đà hương vị.">
-                    <a onclick="goDetail(this.closest('.product'))" ><img class="box_img" src="IMG_SP/tttthong.jpg"></a>
-                    <a onclick="goDetail(this.closest('.product'))" ><h3>Trà Sữa Truyền Thống</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))" ><img class="box_img" src="IMG_SP/tttthong.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))" ><h3>Trà Sữa Truyền Thống</h3></div>
                     <div class="tab_khung">
                         <a href=""onclick="goDetail(this.closest('.product'))" ><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
-                        <a href=""><p class="v8_right khung">Giá <span class="gia-goc">35.000đ</span></p></a>
-                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000 Đồng</span></p></a>               
+                        <a href=""><p class="v8_right khung">Giá <span class="gia-goc">35.0đ</span></p></a>
+                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000đ</span></p>              
                     </div>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -229,12 +225,12 @@
                 data-price="30000"
                 data-img="IMG_SP/thaixanh.jpg"
                 data-desc="Trà sữa thái xanh Việt Nam, đậm đà hương vị,hương vị thái dứa.">
-                    <a onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/thaixanh.jpg"></a>
-                    <a  onclick="goDetail(this.closest('.product'))" ><h3>Thái Xanh</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/thaixanh.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))" ><h3>Thái Xanh</h3></div>
                     <div class="tab_khung">
                         <a ><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
                         <a><p class="v8_right khung">Giá <span class="gia-goc">35.000đ</span></p></a>
-                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000 Đồng</span></p></a>               
+                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000đ</span></p></a>               
                     </div>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -252,12 +248,12 @@
                 data-price="30000"
                 data-img="IMG_SP/thaido.jpg"
                 data-desc="Trà sữa thái đỏ Việt Nam, đậm đà hương vị,hương vị tuyệt vời">
-                    <a onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/thaido.jpg"></a>
-                    <a onclick="goDetail(this.closest('.product'))"><h3>Trà Sữa Thái Đỏ</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/thaido.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))"><h3>Trà Sữa Thái Đỏ</h3></div>
                     <div class="tab_khung">
                         <a href=""><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
                         <a href=""><p class="v8_right khung">Giá <span class="gia-goc">35.000đ</span></p></a>
-                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000 Đồng</span></p></a>               
+                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000đ</span></p></a>               
                     </div>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -274,12 +270,12 @@
                 data-price="30000"
                 data-img="IMG_SP/MATCHA_LATTE.jpg"
                 data-desc="MATCHA LATTE Việt Nam, đậm đà hương vị, bùng nổ cảm xúc.">
-                    <a onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/MATCHA_LATTE.jpg"></a>
-                    <a onclick="goDetail(this.closest('.product'))"><h3>MATCHA LATTE</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))"><img class="box_img" src="IMG_SP/MATCHA_LATTE.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))"><h3>MATCHA LATTE</h3></div>
                     <div class="tab_khung">
                         <a href=""><p class="v8_left khung">Siêu Giảm Giá <span class="gia-goc"></span></p></a>
                         <a href=""><p class="v8_right khung">Giá <span class="gia-goc">35.000đ</span></p></a>
-                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000 Đồng</span></p></a>               
+                        <p class="gia">Giá Sốc: <span class="gia-moi">30.000đ</span></p></a>               
                     </div>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -307,8 +303,8 @@
                 data-price="30000"
                 data-img="IMG_SP/CF_da.jpg"
                 data-desc="Cà phê đá truyền thống Việt Nam, đậm đà hương vị.">
-                   <a onclick="goDetail(this.closest('.product'))">  <img class="v8_img" src="IMG_SP/CF_da.jpg"></a>
-                    <a onclick="goDetail(this.closest('.product'))" ><h3>CaFe Đá</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))">  <img class="v8_img" src="IMG_SP/CF_da.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))" ><h3>CaFe Đá</h3></div>
                     <p class="gia"> <span class="gia-moi">30.000đ </span></p></a>
                    <div class="quantity-box-cart">  
                     <div class="quantity-box">
@@ -326,8 +322,8 @@
                 data-price="30000"
                 data-img="IMG_SP/CF_nau.jpg"
                 data-desc="Cà phê nâu mang hương vị đậm đà.">
-                    <a onclick="goDetail(this.closest('.product'))" ><img class="v8_img" src="IMG_SP/CF_nau.jpg"></a>
-                    <a onclick="goDetail(this.closest('.product'))" ><h3>CaFe Nâu</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))" ><img class="v8_img" src="IMG_SP/CF_nau.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))" ><h3>CaFe Nâu</h3></div>
                     <p class="gia"> <span class="gia-moi">30.000đ </span></p></a>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -346,8 +342,8 @@
                 data-price="30000"
                 data-img="IMG_SP/Dalat.jpg"
                 data-desc="Cà phê hương vị giá lạnh từ vùng đất Đà Lạt.">
-                    <a onclick="goDetail(this.closest('.product'))" ><img class="v8_img" src="IMG_SP/Dalat.jpg"></a>
-                    <a onclick="goDetail(this.closest('.product'))" ><h3>Đà Lạt</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))" ><img class="v8_img" src="IMG_SP/Dalat.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))" ><h3>Đà Lạt</h3></div>
                     <p class="gia"> <span class="gia-moi">30.000đ </span></p></a>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -367,7 +363,7 @@
                 data-img="IMG_SP/PHÊ ESPRESSO.jpg"
                 data-desc="Cà phê hương vị hoàn toàn mới.">
                     <a   onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/PHÊ ESPRESSO.jpg"></a>
-                    <a onclick="goDetail(this.closest('.product'))"  onclick="goDetail(this.closest('.product'))"><h3>CaFe ESPRE</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))"><h3>CaFe ESPRE</h3></div>
                     <p class="gia"> <span class="gia-moi">30.000đ </span></p></a>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -385,8 +381,8 @@
                 data-price="30000"
                 data-img="IMG_SP/cafesua.jpg"
                 data-desc="Cà phê sữa truyền thống Việt Nam, đậm đà hương vị sữa và cà phê.">
-                    <a onclick="goDetail(this.closest('.product'))"  onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/cafesua.jpg"></a>
-                    <a onclick="goDetail(this.closest('.product'))"  onclick="goDetail(this.closest('.product'))"><h3>CaFe Sữa</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/cafesua.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))"><h3>CaFe Sữa</h3></div>
                     <p class="gia"> <span class="gia-moi">30.000đ </span></p></a>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -405,8 +401,8 @@
                 data-price="30000"
                 data-img="IMG_SP/bacxiu.jpg"
                 data-desc="Hương vị thơm ngon,đầy ngọt ngào.">
-                    <a onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/bacxiu.jpg "></a>
-                    <a onclick="goDetail(this.closest('.product'))"><h3>Bạc Xỉu</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/bacxiu.jpg "></div>
+                    <div onclick="goDetail(this.closest('.product'))"><h3>Bạc Xỉu</h3></div>
                     <p class="gia"> <span class="gia-moi">30.000đ </span></p></a>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -424,8 +420,8 @@
                 data-price="30000"
                 data-img="IMG_SP/tttthong.jpg"
                 data-desc="Trà Sữa truyền thống Việt Nam, đậm đà hương vị.">
-                    <a onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/tttthong.jpg"></a>
-                    <a onclick="goDetail(this.closest('.product'))"><h3>Trà Sữa Truyền Thống</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/tttthong.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))"><h3>Trà Sữa Truyền Thống</h3></div>
                     <p class="gia"> <span class="gia-moi">30.000đ </span></p></a>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -444,8 +440,8 @@
                 data-price="30000"
                 data-img="IMG_SP/ttduongden.jpg"
                 data-desc="Hương vị trà sữa cùng đường đen khó quên">
-                    <a onclick="goDetail(this.closest('.product'))"  onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/ttduongden.jpg"></a>
-                    <a  onclick="goDetail(this.closest('.product'))" onclick="goDetail(this.closest('.product'))"><h3>Trân Châu Đường Đen</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/ttduongden.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))"><h3>Trân Châu Đường Đen</h3></div>
                     <p class="gia"> <span class="gia-moi">30.000đ </span></p></a>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -464,8 +460,8 @@
                 data-price="30000"
                 data-img="IMG_SP/thaixanh.jpg"
                 data-desc="Trà sữa thái xanh Việt Nam, đậm đà hương vị,hương vị thái dứa.">
-                    <a onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/thaixanh.jpg"></a>
-                    <a onclick="goDetail(this.closest('.product'))"><h3>Thái Xanh</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/thaixanh.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))"><h3>Thái Xanh</h3></div>
                     <p class="gia"> <span class="gia-moi">30.000đ </span></p></a>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -484,8 +480,8 @@
                 data-price="30000"
                 data-img="IMG_SP/thaido.jpg"
                 data-desc="Trà sữa thái đỏ Việt Nam, đậm đà hương vị,hương vị tuyệt vời">
-                    <a  onclick="goDetail(this.closest('.product'))" onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/thaido.jpg"></a>
-                    <a  onclick="goDetail(this.closest('.product'))" onclick="goDetail(this.closest('.product'))"><h3>Thái Đỏ</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/thaido.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))"><h3>Thái Đỏ</h3></div>
                     <p class="gia"> <span class="gia-moi">30.000đ </span></p></a>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -503,8 +499,8 @@
                 data-price="30000"
                 data-img="IMG_SP/MATCHA_LATTE.jpg"
                 data-desc="MATCHA LATTE Việt Nam, đậm đà hương vị, bùng nổ cảm xúc.">
-                    <a onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/MATCHA_LATTE.jpg"></a>
-                    <a onclick="goDetail(this.closest('.product'))"><h3>MatCha Latte</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/MATCHA_LATTE.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))"><h3>MatCha Latte</h3></div>
                     <p class="gia"> <span class="gia-moi">30.000đ </span></p></a>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box">
@@ -523,8 +519,8 @@
                 data-price="30000"
                 data-img="IMG_SP/MatchaPXP.jpg"
                 data-desc="MATCHA Phan Xi Păng Việt Nam, đậm đà hương vị, bùng nổ cảm xúc.">
-                    <a onclick="goDetail(this.closest('.product'))"  onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/MatchaPXP.jpg"></a>
-                    <a onclick="goDetail(this.closest('.product'))"  onclick="goDetail(this.closest('.product'))"><h3>MATCHA Phan Xi Păng</h3></a>
+                    <div onclick="goDetail(this.closest('.product'))"><img class="v8_img" src="IMG_SP/MatchaPXP.jpg"></div>
+                    <div onclick="goDetail(this.closest('.product'))"><h3>MATCHA Phan Xi Păng</h3></div>
                     <p class="gia"> <span class="gia-moi">30.000đ </span></p></a>
                     <div class="quantity-box-cart">  
                         <div class="quantity-box ">
@@ -589,15 +585,13 @@
         </div>
         </div>
  <div id="footer"></div>
+<script src="JS/header_footer.js"></script>
 <script src="JS/CF.js" ></script>
-    <!--<script src="JS/light_night.js" ></script>-->
-<!-- ==========<script src="JS/filter.js"></script>  ========== -->
-
-<script src="JS/header_footer.js" ></script>
 <script src="JS/Box-action.js"></script>
 <script src="JS/cart.js"></script>
-<script src="JS/chitietsp.js"></script>
 <script src="JS/anima_Index_Cafe.js"></script>
+<script src="JS/chitietsp.js"></script>
+<script src="JS/menu.js"></script>
 
 
 </body>

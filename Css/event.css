@@ -21,7 +21,7 @@ body{
 .hero{
   height:90vh;
   background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-  url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085') center/cover no-repeat;
+  url('https://static.vecteezy.com/system/resources/thumbnails/003/513/008/small/coffee-background-with-realistic-cup-of-coffee-vector-photo.jpg') center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
