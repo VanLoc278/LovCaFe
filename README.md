@@ -4,7 +4,7 @@
 Website bán cà phê với giao diện hiện đại, responsive và có chức năng giỏ hàng.
 
 ## 🚀 Demo
-Link: https://your-demo-link
+Link: [https://your-demo-link](https://lov-cafe.vercel.app/)
 
 ## 🛠 Công nghệ sử dụng
 - HTML5
