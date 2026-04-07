@@ -16,9 +16,9 @@ Link: [https://your-demo-link](https://lov-cafe.vercel.app/)
 - Tăng giảm số lượng
 - Giỏ hàng lưu LocalStorage
 - Responsive mobile
+- Chi tiết sản phẩm, giới thiệu,...
 
 ## 📷 Screenshots
-(ảnh chụp giao diện)
 
 ## 👤 Tác giả
 Lộc Lê Ngô Văn
