@@ -19,6 +19,6 @@ Link: [https://your-demo-link](https://lov-cafe.vercel.app/)
 - Chi tiết sản phẩm, giới thiệu,...
 
 ## 📷 Screenshots
-
+screenshots/Screenshot 2026-04-07 222619.png
 ## 👤 Tác giả
 Lộc Lê Ngô Văn
