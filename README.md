@@ -20,5 +20,13 @@ Link: [https://your-demo-link](https://lov-cafe.vercel.app/)
 
 ## 📷 Screenshots
 ![Screenshot](screenshots/home.png)
+
+![Screenshot](screensh/discount.png)
+
+![Screenshot](screenshots/product_gird.png)
+
+![Screenshot](screenshots/Evaluate.png)
+
+![Screenshot](screenshots/popup.png)
 ## 👤 Tác giả
 Lộc Lê Ngô Văn
