@@ -23,7 +23,7 @@ Link: [https://your-demo-link](https://lov-cafe.vercel.app/)
 
 ![Screenshot](screenshots/discount.png)
 
-![Screenshot](screenshots/product_gird.png)
+![Screenshot](screenshots/product_grid.png)
 
 ![Screenshot](screenshots/Evaluate.png)
 
